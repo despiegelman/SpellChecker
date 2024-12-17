@@ -40,21 +40,25 @@ public class SpellChecker
       }
 
     public boolean spellcheck(String word) {
+        boolean contains = false;
         for (int i = 0; i < dictionary.length; i++){
             if (dictionary[i].equals(word)){
-                return true;
-            }else{
-                return false;
+                contains = true;
             }
         }
-        return false;
+        return contains;
     }
 
 
 
 
 
-    public void printStartsWith(String string) {
+    public void printStartsWith(String firstLetters) {
+        for (int i = 0; i < dictionary.length; i++){
+            if (dictionary[i].startsWith(firstLetters)){
+                System.out.println(dictionary[i]);
+            }
+        }
     }
 
     public void print10(){
