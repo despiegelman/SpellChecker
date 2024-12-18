@@ -78,7 +78,5 @@ public class SpellChecker
         for (int num=0; num<10; num++){
             System.out.println(dictionary[num]);
         }
-    }
-      
-    
+    }  
    }
