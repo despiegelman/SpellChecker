@@ -40,26 +40,43 @@ public class SpellChecker
       }
 
     public boolean spellcheck(String word) {
-        for (int i = 0; i < dictionary.length; i++){
-            if (dictionary[i].equals(word)){
-                return true;
-            }else{
-                return false;
+        boolean result = false;
+        //for (int i = 0; i < dictionary.length; i++){
+            //if (dictionary[i].equals(word)){
+                //return true;
+            //}else{
+                //return false;
+            //}
+        //}
+        for (String i : dictionary){
+            if (i.equals(word)){
+                result = true;
             }
         }
-        return false;
+        return result;
     }
 
 
 
 
 
-    public void printStartsWith(String string) {
+    public void printStartsWith(String firstLetters) {
+        //for (int i = 0; i < dictionary.length; i++){
+            //if (dictionary[i].startsWith(firstLetters)){
+                //System.out.println(dictionary[i]);
+            //}
+        //}
+        for (String i : dictionary){
+            if (i.startsWith(firstLetters)){
+                System.out.println(i);
+            }
+        }
     }
 
     public void print10(){
+        //Doesn't work as a foreach loop because indexes are required in the method
         for (int num=0; num<10; num++){
-        System.out.println(dictionary[num]);
+            System.out.println(dictionary[num]);
         }
     }
       
